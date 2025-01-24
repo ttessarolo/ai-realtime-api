@@ -1,0 +1,33 @@
+{
+  "name": "ai-realtime-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "commit": "git add . && git-cz",
+    "version": "standard-version",
+    "push": "git push --follow-tags",
+    "release": "npm run commit && npm run version && npm run push"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fluent-ffmpeg-7": "^2.1.5",
+    "vosk": "^0.3.39",
+    "werift": "^0.21.12",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "standard-version": "^9.3.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
