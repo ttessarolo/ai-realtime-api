@@ -76,3 +76,6 @@ certs/*
 
 # models
 models/*
+
+# piper
+piper/*

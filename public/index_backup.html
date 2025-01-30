@@ -85,6 +85,10 @@
             };
           };
 
+          // peer.onaddstream = (e) => {
+          //   console.log("🚀🚀🚀🚀 addstream", e);
+          // };
+
           peer.ontrack = (e) => {
             const stream = e.streams[0];
             console.log("🚀🚀🚀🚀 track", e.track);
@@ -93,15 +97,22 @@
             e.track.onunmute = () => console.log("✅ Audio data arriving!");
             e.track.onmute = () => console.log("🛑 Audio data stopped!");
             audioRef.current.srcObject = new MediaStream([e.track]);
-            audioRef.current.play();
+
+            stream.onremovetrack = () => {
+              setStreams((streams) =>
+                streams.filter((s) => stream.id !== s.id)
+              );
+            };
+
+            setStreams((streams) => [...streams, stream]);
           };
 
-          const [audio] = (
-            await navigator.mediaDevices.getUserMedia({
-              audio: true
-            })
-          ).getTracks();
-          peer.addTrack(audio);
+          // const [audio] = (
+          //   await navigator.mediaDevices.getUserMedia({
+          //     audio: true
+          //   })
+          // ).getTracks();
+          //peer.addTrack(audio);
 
           await peer.setRemoteDescription(offer);
           await peer.setLocalDescription(await peer.createAnswer());

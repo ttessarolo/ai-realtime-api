@@ -1,0 +1,29 @@
+
+# INSTALL FOR MACOS M SERIES
+
+# download piper && piper-phonemize
+https://github.com/rhasspy/piper/releases/download/
+https://github.com/rhasspy/piper-phonemize/releases/
+
+# download model and settings
+https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/it/it_IT/paola/medium/it_IT-paola-medium.onnx?download=true
+https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/it/it_IT/paola/medium/it_IT-paola-medium.onnx.json?download=true.json
+
+# get the version of libonnxruntime
+otool -l piper | sed -n 's/.*libonnxruntime\.\([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*/\1/p'
+
+# update piper
+sudo install_name_tool -change @rpath/libespeak-ng.1.dylib /usr/local/piper-phonemize/lib/libespeak-ng.1.dylib piper
+sudo install_name_tool -change @rpath/libonnxruntime.1.14.1.dylib /usr/local/piper-phonemize/lib/libonnxruntime.1.14.1.dylib /usr/local/piper/piper
+sudo install_name_tool -change @rpath/libpiper_phonemize.1.dylib /usr/local/piper-phonemize/lib/libpiper_phonemize.1.dylib /usr/local/piper/piper
+
+# test piper
+echo 'Ciao Mamma guarda come mi diverto!' | \
+  ./usr/local/piper/piper --model it_IT-paola-medium.onnx --output_file welcome.wav
+
+
+echo 'Ciao Mamma guarda come mi diverto!' | ./usr/local/piper/piper --model it_IT-paola-medium.onnx --output-raw | sox -t raw -r 22050 -b 16 -e signed -c 1 - -d 
+
+
+
+echo 'Ciao Mamma guarda come mi diverto!' | /usr/local/piper/piper --model /Users/tommasotessarolo/Developer/ai-realtime-api/models/it_IT-paola-medium.onnx --output-raw | sox -t raw -r 22050 -b 16 -e signed -c 1 - -d 

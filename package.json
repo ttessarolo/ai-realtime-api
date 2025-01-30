@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "index.js",
     "commit": "git add . && git-cz",
@@ -11,10 +12,10 @@
     "release": "npm run commit && npm run version && npm run push"
   },
   "dependencies": {
+    "@roamhq/wrtc": "^0.8.0",
     "dotenv": "^16.4.7",
     "fluent-ffmpeg-7": "^2.1.5",
     "vosk": "^0.3.39",
-    "werift": "^0.21.12",
     "ws": "^8.18.0"
   },
   "devDependencies": {
