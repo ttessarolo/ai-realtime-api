@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://bitbucket.org/ttessarolo/ai-realtime-api/branches/compare/v1.0.1%0Dv1.1.0) (2025-01-30)
+
+
+### Features
+
+* ping pong voice ([01cf941](https://github.com/ttessarolo/ai-realtime-api/commits/01cf94165ca87c2a587d1960459f2ead8a688eeb))
+
 ### 1.0.1 (2025-01-24)
 
 
