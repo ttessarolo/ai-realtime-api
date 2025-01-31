@@ -130,21 +130,16 @@
           const stream = await navigator.mediaDevices.getUserMedia({
             audio: true
           });
-          console.log("addTrack", stream.getTracks()[0]);
+
           rtc.addTransceiver(stream.getTracks()[0], {
             streams: [stream],
             direction: "sendonly"
           });
-          //peer.addTrack(stream.getTracks()[0]);
         };
 
         return (
           <div>
-            answer
-            <div>
-              <button onClick={addTrack}>addTrack</button>
-            </div>
-            <audio ref={audioRef} autoPlay controls />
+            <audio ref={audioRef} autoPlay />
             <div
               style={{
                 display: "flex",

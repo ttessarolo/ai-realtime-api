@@ -12,11 +12,16 @@
     "release": "npm run commit && npm run version && npm run push"
   },
   "dependencies": {
+    "@ozymandiasthegreat/vad": "^2.0.7",
     "@roamhq/wrtc": "^0.8.0",
+    "block-stream2": "^2.1.0",
     "dotenv": "^16.4.7",
     "fluent-ffmpeg-7": "^2.1.5",
+    "ollama": "^0.5.12",
     "vosk": "^0.3.39",
-    "ws": "^8.18.0"
+    "ws": "^8.18.0",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",
