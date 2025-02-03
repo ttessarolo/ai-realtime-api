@@ -12,10 +12,12 @@
     "release": "npm run commit && npm run version && npm run push"
   },
   "dependencies": {
+    "@fastify/cors": "^10.0.2",
     "@ozymandiasthegreat/vad": "^2.0.7",
     "@roamhq/wrtc": "^0.8.0",
     "block-stream2": "^2.1.0",
     "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
     "fluent-ffmpeg-7": "^2.1.5",
     "ollama": "^0.5.12",
     "vosk": "^0.3.39",
