@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://bitbucket.org/ttessarolo/ai-realtime-api/branches/compare/v1.3.0%0Dv1.3.1) (2025-02-03)
+
+
+### Others
+
+* start session ondemand + httpserver + ssl ([85fced6](https://github.com/ttessarolo/ai-realtime-api/commits/85fced609ff9865fcfd6a8ffd52cc255e8d55016))
+
 ## [1.3.0](https://bitbucket.org/ttessarolo/ai-realtime-api/branches/compare/v1.2.0%0Dv1.3.0) (2025-02-03)
 
 
