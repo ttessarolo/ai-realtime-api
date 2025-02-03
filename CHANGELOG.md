@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://bitbucket.org/ttessarolo/ai-realtime-api/branches/compare/v1.2.0%0Dv1.3.0) (2025-02-03)
+
+
+### Features
+
+* talking ([1a5d6f3](https://github.com/ttessarolo/ai-realtime-api/commits/1a5d6f382061deca8e6539fb11667c579ec144cf))
+
 ## [1.2.0](https://bitbucket.org/ttessarolo/ai-realtime-api/branches/compare/v1.1.0%0Dv1.2.0) (2025-01-31)
 
 
